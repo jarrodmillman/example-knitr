@@ -1,6 +1,6 @@
 BUILDDIR  = _build
-BINDIR    = ../../bin
-TEX2PDF  := cd $(BUILDDIR) && TEXINPUTS="../..:" pdflatex -shell-escape #-interaction=batchmode
+BINDIR    = ../bin
+TEX2PDF  := cd $(BUILDDIR) && TEXINPUTS="..:" pdflatex -shell-escape #-interaction=batchmode
 KNIT     := cd $(BUILDDIR) && $(BINDIR)/knitr
 
 all: clean hw1
