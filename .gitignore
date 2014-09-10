@@ -1,3 +1,7 @@
+*.bak
+*.swp
+_build
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
