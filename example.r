@@ -6,7 +6,8 @@ y = x + runif(n)
 
 ## @knitr p2
 
-plot(x,y)
+plot(x, y)
+plot(x, log(y))
 
 ## @knitr p3
 
@@ -16,5 +17,6 @@ too_many_na = function(df, threshold, axis) {
     return(indices)
 }
 
-## @knitr p4
 
+## @knitr session
+print(sessionInfo(), locale=FALSE)
