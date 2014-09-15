@@ -18,3 +18,5 @@ You will need:
 * [Wickhams' chapter on testing](http://r-pkgs.had.co.nz/tests.html)
 * [Old R journal
   article](http://journal.r-project.org/archive/2011-1/RJournal_2011-1_Wickham.pdf)
+* [Converting from
+  RUnit](http://www.r-bloggers.com/automatically-convert-runit-tests-to-testthat-tests/)
