@@ -8,6 +8,9 @@ all: clean hw1
 clean:
 	rm -rf $(BUILDDIR)/* *.pdf
 
+test:
+	R --quiet -e 'library(testthat); test_file("test.r")'
+
 $(BUILDDIR):
 	mkdir -p $@
 

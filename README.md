@@ -10,3 +10,4 @@ You will need:
 - R
 - knitr
 - LaTeX
+- testthat
