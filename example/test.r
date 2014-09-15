@@ -19,6 +19,7 @@ test_that("too_many_na works correctly", {
    expect_that(too_many_na(testdf1, 0, 5),
                throws_error())
    # test functionality
+   expect_that(too_many_na(testdf1, 0, 1), is_a("integer"))
    expect_that(too_many_na(testdf1, 0, 1), equals(1))
    row1 = 1
    names(row1) = "x"
