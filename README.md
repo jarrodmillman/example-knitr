@@ -11,7 +11,13 @@ You will need:
 - LaTeX
 - testthat
 
-## testthat
+## Testing
+
+- [Debugging, condition handling, and defensive
+  programming](http://adv-r.had.co.nz/Exceptions-Debugging.html)
+- [assertthat](https://github.com/hadley/assertthat)
+
+### testthat
 
 * [Reference manual](http://cran.r-project.org/web/packages/testthat/testthat.pdf)
 * [Source code](https://github.com/hadley/testthat)
