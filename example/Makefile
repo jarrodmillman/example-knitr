@@ -1,5 +1,5 @@
 BUILDDIR  = _build
-BINDIR    = ../bin
+BINDIR    = ../../bin
 TEX2PDF  := cd $(BUILDDIR) && TEXINPUTS="..:" pdflatex -shell-escape
 KNIT     := cd $(BUILDDIR) && $(BINDIR)/knitr
 
