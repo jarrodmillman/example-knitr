@@ -1,5 +1,4 @@
-example-knitr
-=============
+# example-knitr
 
 Example of using knitr to combine R and LaTeX files
 
@@ -11,3 +10,11 @@ You will need:
 - knitr
 - LaTeX
 - testthat
+
+## testthat
+
+* [Reference manual](http://cran.r-project.org/web/packages/testthat/testthat.pdf)
+* [Source code](https://github.com/hadley/testthat)
+* [Wickhams' chapter on testing](http://r-pkgs.had.co.nz/tests.html)
+* [Old R journal
+  article](http://journal.r-project.org/archive/2011-1/RJournal_2011-1_Wickham.pdf)
