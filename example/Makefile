@@ -1,25 +1,22 @@
-BUILDDIR  = _build
-BINDIR    = ../../bin
-TEX2PDF  := cd $(BUILDDIR) && TEXINPUTS="..:" pdflatex -shell-escape
-KNIT     := cd $(BUILDDIR) && $(BINDIR)/knitr
+FIGDIR   = fig
+BUILDDIR = _build
+RSCRIPT := cd $(BUILDDIR) && Rscript -e
+TEX2PDF := cd $(BUILDDIR) && pdflatex -shell-escape
+BIBTEX  := cd $(BUILDDIR) && BSTINPUTS="..:" bibtex
 
-all: clean hw1
+all: clean example
 
 clean:
-	rm -rf $(BUILDDIR)/* *.pdf
-
-test:
-	R --quiet -e 'library(testthat); test_file("test.r")'
+	rm -rf $(BUILDDIR)/* *.pdf *.png
 
 $(BUILDDIR):
-	mkdir -p $@
+	mkdir -p $(@)
 
-$(BUILDDIR)/%.pdf: %.tex
-	($(TEX2PDF) $(<F) 1>/dev/null)
-
-
-%: %.tex $(BUILDDIR)
-	($(KNIT) ../$<)
-	($(TEX2PDF) $(@)-out.tex)
-	($(TEX2PDF) $(@)-out.tex)
-	cp $(BUILDDIR)/$(@)-out.pdf $(@).pdf 
+example: example.tex $(BUILDDIR)
+	$(RSCRIPT) "library(knitr); knit('../$(<F)', '$(@).tex')"
+	cp example.bib $(BUILDDIR)
+	($(TEX2PDF) $(@))
+	($(BIBTEX) $(@))
+	($(TEX2PDF) $(@))
+	($(TEX2PDF) $(@))
+	cp $(BUILDDIR)/$(@).pdf $(@).pdf
